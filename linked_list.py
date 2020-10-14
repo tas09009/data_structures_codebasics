@@ -1,3 +1,8 @@
+'''
+Original problem set can be found at https://github.com/codebasics/data-structures-algorithms-python/blob/master/data_structures/3_LinkedList/3_linked_list_exercise.md
+'''
+
+
 class Node:
     def __init__(self, data=None, next=None, prev=None):
         self.data = data
@@ -5,7 +10,7 @@ class Node:
         self.prev = prev
         
 
-class Doubly_LinkedList:
+class DoublyLinkedList:
     def __init__(self):
         self.head = None
 
@@ -140,19 +145,33 @@ class Doubly_LinkedList:
 
 
 if __name__ == '__main__':
-    ll = Doubly_LinkedList()
+    # ll = Doubly_LinkedList()
+    # ll.insert_values(["banana","mango","grapes","orange"])
+    # ll.print_forward()
+    # ll.print_backward()
+
+    # ll.insert_after_value("mango","apple") # insert apple after mango
+    # ll.print_forward()
+    # ll.remove_by_value("orange") # remove orange from linked list
+    # ll.remove_by_value("figs")
+    # ll.print_forward()
+
+    # ll.remove_by_value("banana")
+    # ll.remove_by_value("mango")
+    # ll.remove_by_value("apple")
+    # ll.remove_by_value("grapes")
+    # ll.print_forward()
+
+
+    ll = DoublyLinkedList()
     ll.insert_values(["banana","mango","grapes","orange"])
     ll.print_forward()
     ll.print_backward()
-
-    ll.insert_after_value("mango","apple") # insert apple after mango
+    ll.insert_at_end("figs")
     ll.print_forward()
-    ll.remove_by_value("orange") # remove orange from linked list
-    ll.remove_by_value("figs")
+    ll.insert_at(0,"jackfruit")
     ll.print_forward()
-
-    ll.remove_by_value("banana")
-    ll.remove_by_value("mango")
-    ll.remove_by_value("apple")
-    ll.remove_by_value("grapes")
+    ll.insert_at(6,"dates")
+    ll.print_forward()
+    ll.insert_at(2,"kiwi")
     ll.print_forward()
